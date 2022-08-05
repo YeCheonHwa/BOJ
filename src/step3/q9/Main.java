@@ -1,4 +1,4 @@
-package step3.q8;
+package step3.q9;
 
 import java.util.Scanner;
 
@@ -7,9 +7,14 @@ public class Main {
         Scanner s = new Scanner(System.in);
         int num = s.nextInt();
         for (int i = 1; i <= num; i++) {
-            int num1 = s.nextInt();
-            int num2 = s.nextInt();
-            System.out.println("Case #" + i + ": " + num1 + " + " + num2 + " = " + (num1 + num2));
+            for (int j = 1; j <= num; j++) {
+                if (num - i >= j) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
         }
     }
 }
